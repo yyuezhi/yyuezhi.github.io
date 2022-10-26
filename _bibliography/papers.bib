@@ -1,0 +1,83 @@
+---
+---
+
+
+@inproceedings{SketchConcept2022,
+ author = {Yang, Yuezhi and Pan, Hao},
+ booktitle = {Advances in Neural Information Processing Systems (NeuralNIPS)},
+ abstract= {Sketch design concepts are recurring patterns found in parametric CAD sketches.Though rarely explicitly formalized by the CAD designers, these concepts are implicitly used in design for modularity and regularity. In this paper, we propose a
+learning based approach that discovers the modular concepts by induction over raw
+sketches. We propose the dual implicit-explicit representation of concept structures
+that allows implicit detection and explicit generation, and the separation of structure
+generation and parameter instantiation for parameterized concept generation, to
+learn modular concepts by end-to-end training. We demonstrate the design concept
+learning on a large scale CAD sketch dataset and show its applications for design
+intent interpretation and auto-completion.},
+ title = {Discovering Design Concepts for CAD Sketches},
+ code = {https://github.com/yyuezhi/SketchConcept},
+ Preprint = {www.google.com},
+ video = {https://recorder-v3.slideslive.com/#/share?share=72077&s=20fa0056-5578-4346-a95c-fd4eabd9e945},
+ volume = {35},
+ selected={true},
+ preview={sketchconcept.jpg},
+ pdf={sketchconcept.pdf},
+ year = {2022}
+}
+
+@inproceedings{ToothImpaintor2021,
+ author = {Yang, Yuezhi and Cui, Zhiming and Li, Changjian and Wang, Wenping},
+ booktitle = {Arxiv},
+ abstract= {In orthodontic treatment, a full tooth model consisting of
+both the crown and root is indispensable in making the treatment plan.
+However, acquiring tooth root information to obtain the full tooth model
+from CBCT images is sometimes restricted due to the massive radiation
+of CBCT scanning. Thus, reconstructing the full tooth shape from the
+ready-to-use input, e.g., the partial intra-oral scan and the 2D panoramic
+image, is an applicable and valuable solution. In this paper, we propose
+a neural network, called ToothInpaintor, that takes as input a partial 3D
+dental model and a 2D panoramic image and reconstructs the full tooth
+model with high-quality root(s). Technically, we utilize the implicit rep-
+resentation for both the 3D and 2D inputs, and learn a latent space of the
+full tooth shapes. At test time, given an input, we successfully project
+it to the learned latent space via neural optimization to obtain the full
+tooth model conditioned on the input. To help find the robust projec-
+tion, a novel adversarial learning module is exploited in our pipeline. We
+extensively evaluate our method on a dataset collected from real-world
+clinics. The evaluation, comparison, and comprehensive ablation studies
+demonstrate that our approach },
+ title = {ToothInpaintor: Tooth Inpainting from Partial
+3D Dental Model and 2D Panoramic Image},
+ selected={true},
+ preview={toothimpaintor.jpg},
+ pdf={toothimpaintor.pdf},
+ year = {2021}
+}
+
+
+@inproceedings{DomainGeneralization2021,
+ author = {Li, Zheren and Cui, Zhiming and Wang, Sheng and Qi, Yuji and Ouyang, Xi and Chen, Qitian and Yang, Yuezhi
+    and Xue, Zhong and Shen, Dinggang and Cheng, Jie-Zhi},
+ booktitle = {International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)},
+ abstract= { Lesion detection is a fundamental problem in the computeraided diagnosis scheme for mammography. The advance of deep learning
+techniques have made a remarkable progress for this task, provided that
+the training data are large and sufficiently diverse in terms of image style
+and quality. In particular, the diversity of image style may be majorly
+attributed to the vendor factor. However, the collection of mammograms
+from vendors as many as possible is very expensive and sometimes impractical for laboratory-scale studies. Accordingly, to further augment
+the generalization capability of deep learning model to various vendors
+with limited resources, a new contrastive learning scheme is developed.
+Specifically, the backbone network is firstly trained with a multi-style
+and multi-view unsupervised self-learning scheme for the embedding of
+invariant features to various vendor-styles. Afterward, the backbone network is then recalibrated to the downstream task of lesion detection with
+the specific supervised learning. The proposed method is evaluated with
+mammograms from four vendors and one unseen public dataset. The
+experimental results suggest that our approach can effectively improve
+detection performance on both seen and unseen domains, and outperforms many state-of-the-art (SOTA) generalization methods},
+ title = {Domain Generalization for Mammography
+Detection via Multi-style and Multi-view
+Contrastive Learning},
+ selected={false},
+ preview={DomainGeneralization.jpg},
+ pdf={DomainGeneralization.pdf},
+ year = {2021}
+}
