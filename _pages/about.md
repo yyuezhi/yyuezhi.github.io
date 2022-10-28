@@ -14,7 +14,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I an a final year undergraduate student at The University of Hong Kong, major in Computer Science. I was fortunate to work with [Dr. Hao Pan](https://haopan.github.io/) at Microsoft Research Asia and [Prof. Wenping Wang](https://www.cs.hku.hk/people/academic-staff/wenping) at The University of Hong Kong during my undergraduate period.
+I am a final year undergraduate student at The University of Hong Kong, major in Computer Science, graduating in 2023. I was fortunate to work with [Dr. Hao Pan](https://haopan.github.io/) at Microsoft Research Asia and [Prof. Wenping Wang](https://www.cs.hku.hk/people/academic-staff/wenping) at The University of Hong Kong during my undergraduate period.
 
 I am interested in computer graphics, especially geometric modelling, 3D reconstruction, analysis of 3D Shape and CAD model.
 
