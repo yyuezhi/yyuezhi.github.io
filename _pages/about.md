@@ -2,11 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: "Email: yzyang@cs.hku.hk"
+subtitle: "Email: yzyang@cs.utexas.edu"
 
 profile:
   align: right
-  image: yuezhi_pic.jpg #prof_pic.jpg
+  image: yuezhi_2023_08.jpg #prof_pic.jpg
   image_circular: false # crops the image to make it circular
 
 news: true  # includes a list of news items
@@ -14,9 +14,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a final year undergraduate student at The University of Hong Kong, major in Computer Science, graduating in 2023. I was fortunate to work with [Dr. Hao Pan](https://haopan.github.io/) at Microsoft Research Asia and [Prof. Wenping Wang](https://www.cs.hku.hk/people/academic-staff/wenping) at The University of Hong Kong during my undergraduate period.
+I am a PhD student at University of Texas at Austin adviced by [Prof. Qixing Huang](https://www.cs.utexas.edu/~huangqx/). I was fortunate to work with [Dr. Hao Pan](https://haopan.github.io/) at Microsoft Research Asia and [Prof. Wenping Wang](https://www.cs.hku.hk/people/academic-staff/wenping) at The University of Hong Kong during my undergraduate period.
 
-I am interested in computer graphics, especially geometric modelling, 3D reconstruction, analysis of 3D Shape and CAD model.
+I am interested in computer graphics, especially geometric modelling, 3D reconstruction and CAD model.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
