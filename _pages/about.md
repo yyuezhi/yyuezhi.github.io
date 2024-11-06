@@ -14,7 +14,8 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a PhD student at University of Texas at Austin adviced by [Prof. Qixing Huang](https://www.cs.utexas.edu/~huangqx/). I was fortunate to work with [Dr. Hao Pan](https://haopan.github.io/) at Microsoft Research Asia and [Prof. Wenping Wang](https://www.cs.hku.hk/people/academic-staff/wenping) at The University of Hong Kong during my undergraduate period.
+I am a PhD student at University of Texas at Austin adviced by [Qixing Huang](https://www.cs.utexas.edu/~huangqx/). In 2024 summer, I interned at Adobe Research with [Zhiqin Chen](https://czq142857.github.io/), [Vova Kim](http://www.vovakim.com/) and [
+Siddhartha Chaudhuri](https://www.cse.iitb.ac.in/~sidch/). I was fortunate to work with [Hao Pan](https://haopan.github.io/) at Microsoft Research Asia and [Wenping Wang](https://www.cs.hku.hk/people/academic-staff/wenping) at The University of Hong Kong during my undergraduate period. 
 
 I am interested in computer graphics, especially geometric modelling, 3D reconstruction and CAD model.
 
