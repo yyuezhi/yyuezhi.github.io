@@ -1,5 +1,41 @@
 ---
 ---
+@inproceedings{GenVDM2024,
+ author = {Yang, Yuezhi and Chen, Qimin and Kim, Vladimir and Chaudhuri, Siddhartha and Huang, Qixing and Chen, Zhiqin},
+ booktitle = {Coming Soon},
+ abstract= {Vector displacement map is a common tool for artists to add parts or surface details to 3D shapes. However, creating VDM is tedious as it requires artists enormous effort to model 3D shapes, Despite the growing popularity of text/image to 3D object model, most of them has fail to generate details comparable to VDM. In this project, we present a system to automatically
+generate a VDM conditioned on text prompt or an image. To tackle the challenge of VDM data scarcity, we propose a multi-view normal image generation model that fineturn stable diffusion model on part-level objaverse data. We then build a reconstruction model to directly reconstruct VDM from multi-view data. Preliminary result shows that our model outperforms text/image to 3D models in detail generation.},
+ title = { GenVDM:
+Generating Vector Displacement Maps From a Single Image.},
+ selected={true},
+ preview={GenVDM.png},
+ year = {2024}
+}
+
+
+@inproceedings{GenAnalysis2024,
+ author = {Yang, Yuezhi and Yang, Haitao and Nakayama,  George Kiyohiro and Huang, Xiangru and Guibas, Leonidas and Huang, Qixing},
+ booktitle = {Arxiv},
+ abstract= {We introduce GenAnalysis, an implicit shape generation framework that
+allows joint analysis of a collection of man-made shapes. GenAnalysis innovates in learning an implicit shape generator to reconstruct a continuous
+shape space from the input shape collection. It offers interpolations between
+pairs of input shapes for correspondence computation. It also allows us to
+understand the shape variations of each shape in the context of neighboring
+shapes. Such variations provide segmentation cues. A key idea of GenAnalysis is to enforce an as-affine-as-possible (AAAP) deformation regularization
+loss among adjacent synthetic shapes of the generator. This loss forces the generator to learn the underlying piece-wise affine part structures. We show
+how to extract data-driven segmentation cues by recovering piece-wise
+affine vector fields in the tangent space of each shape and how to use this
+generator to compute consistent inter-shape correspondences. These correspondences are then used to aggregate single-shape segmentation cues into
+consistent segmentations. Experimental results on benchmark datasets show
+that GenAnalysis achieves state-of-the-art results on shape segmentation
+and shape matching.},
+ title = { GenAnalysis: Joint Shape Analysis by Learning Man-Made Shape
+Generators with Deformation Regularizations.},
+ selected={true},
+ preview={GenAnalysis.png},
+ pdf={GenAnalysis.pdf},
+ year = {2024}
+}
 
 
 @inproceedings{SketchConcept2022,
