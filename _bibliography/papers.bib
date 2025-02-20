@@ -1,115 +1,122 @@
 ---
 ---
-
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@inproceedings{GenVDM2024,
+ author = {Yang, Yuezhi and Chen, Qimin and Kim, Vladimir and Chaudhuri, Siddhartha and Huang, Qixing and Chen, Zhiqin},
+ booktitle = {International Conference on Computer Vision and Pattern
+	Recognition (CVPR)},
+ abstract= {Vector displacement map is a common tool for artists to add parts or surface details to 3D shapes. However, creating VDM is tedious as it requires artists enormous effort to model 3D shapes, Despite the growing popularity of text/image to 3D object model, most of them has fail to generate details comparable to VDM. In this project, we present a system to automatically
+generate a VDM conditioned on text prompt or an image. To tackle the challenge of VDM data scarcity, we propose a multi-view normal image generation model that fineturn stable diffusion model on part-level objaverse data. We then build a reconstruction model to directly reconstruct VDM from multi-view data. Preliminary result shows that our model outperforms text/image to 3D models in detail generation.},
+ title = { GenVDM:
+Generating Vector Displacement Maps From a Single Image.},
+ selected={true},
+ preview={GenVDM.png},
+ year = {2025},
+ pdf={GenVDM.pdf},
+code = {https://github.com/yyuezhi/GenVDM/},
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+
+@inproceedings{GenAnalysis2024,
+ author = {Yang, Yuezhi and Yang, Haitao and Nakayama,  George Kiyohiro and Huang, Xiangru and Guibas, Leonidas and Huang, Qixing},
+ booktitle = {Arxiv},
+ abstract= {We introduce GenAnalysis, an implicit shape generation framework that
+allows joint analysis of a collection of man-made shapes. GenAnalysis innovates in learning an implicit shape generator to reconstruct a continuous
+shape space from the input shape collection. It offers interpolations between
+pairs of input shapes for correspondence computation. It also allows us to
+understand the shape variations of each shape in the context of neighboring
+shapes. Such variations provide segmentation cues. A key idea of GenAnalysis is to enforce an as-affine-as-possible (AAAP) deformation regularization
+loss among adjacent synthetic shapes of the generator. This loss forces the generator to learn the underlying piece-wise affine part structures. We show
+how to extract data-driven segmentation cues by recovering piece-wise
+affine vector fields in the tangent space of each shape and how to use this
+generator to compute consistent inter-shape correspondences. These correspondences are then used to aggregate single-shape segmentation cues into
+consistent segmentations. Experimental results on benchmark datasets show
+that GenAnalysis achieves state-of-the-art results on shape segmentation
+and shape matching.},
+ title = { GenAnalysis: Joint Shape Analysis by Learning Man-Made Shape
+Generators with Deformation Regularizations.},
+ selected={true},
+ preview={GenAnalysis.png},
+ pdf={GenAnalysis.pdf},
+ year = {2024}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+
+@inproceedings{SketchConcept2022,
+ author = {Yang, Yuezhi and Pan, Hao},
+ booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+ abstract= {Sketch design concepts are recurring patterns found in parametric CAD sketches.Though rarely explicitly formalized by the CAD designers, these concepts are implicitly used in design for modularity and regularity. In this paper, we propose a
+learning based approach that discovers the modular concepts by induction over raw
+sketches. We propose the dual implicit-explicit representation of concept structures
+that allows implicit detection and explicit generation, and the separation of structure
+generation and parameter instantiation for parameterized concept generation, to
+learn modular concepts by end-to-end training. We demonstrate the design concept
+learning on a large scale CAD sketch dataset and show its applications for design
+intent interpretation and auto-completion.},
+ title = {Discovering Design Concepts for CAD Sketches},
+ code = {https://github.com/yyuezhi/SketchConcept},
+ Preprint = {https://arxiv.org/abs/2210.14451},
+ video = {https://recorder-v3.slideslive.com/#/share?share=72077&s=20fa0056-5578-4346-a95c-fd4eabd9e945},
+ volume = {35},
+ selected={true},
+ preview={sketchconcept.jpg},
+ pdf={sketchconcept.pdf},
+ year = {2022}
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
+@inproceedings{ToothImpaintor2021,
+ author = {Yang, Yuezhi and Cui, Zhiming and Li, Changjian and Wang, Wenping},
+ booktitle = {Arxiv},
+ abstract= {In orthodontic treatment, a full tooth model consisting of
+both the crown and root is indispensable in making the treatment plan.
+However, acquiring tooth root information to obtain the full tooth model
+from CBCT images is sometimes restricted due to the massive radiation
+of CBCT scanning. Thus, reconstructing the full tooth shape from the
+ready-to-use input, e.g., the partial intra-oral scan and the 2D panoramic
+image, is an applicable and valuable solution. In this paper, we propose
+a neural network, called ToothInpaintor, that takes as input a partial 3D
+dental model and a 2D panoramic image and reconstructs the full tooth
+model with high-quality root(s). Technically, we utilize the implicit rep-
+resentation for both the 3D and 2D inputs, and learn a latent space of the
+full tooth shapes. At test time, given an input, we successfully project
+it to the learned latent space via neural optimization to obtain the full
+tooth model conditioned on the input. To help find the robust projec-
+tion, a novel adversarial learning module is exploited in our pipeline. We
+extensively evaluate our method on a dataset collected from real-world
+clinics. The evaluation, comparison, and comprehensive ablation studies
+demonstrate that our approach },
+ title = {ToothInpaintor: Tooth Inpainting from Partial
+3D Dental Model and 2D Panoramic Image},
+ selected={true},
+ preview={toothimpaintor.jpg},
+ pdf={toothimpaintor.pdf},
+ year = {2021}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@inproceedings{DomainGeneralization2021,
+ author = {Li, Zheren and Cui, Zhiming and Wang, Sheng and Qi, Yuji and Ouyang, Xi and Chen, Qitian and Yang, Yuezhi
+    and Xue, Zhong and Shen, Dinggang and Cheng, Jie-Zhi},
+ booktitle = {International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)},
+ abstract= { Lesion detection is a fundamental problem in the computeraided diagnosis scheme for mammography. The advance of deep learning
+techniques have made a remarkable progress for this task, provided that
+the training data are large and sufficiently diverse in terms of image style
+and quality. In particular, the diversity of image style may be majorly
+attributed to the vendor factor. However, the collection of mammograms
+from vendors as many as possible is very expensive and sometimes impractical for laboratory-scale studies. Accordingly, to further augment
+the generalization capability of deep learning model to various vendors
+with limited resources, a new contrastive learning scheme is developed.
+Specifically, the backbone network is firstly trained with a multi-style
+and multi-view unsupervised self-learning scheme for the embedding of
+invariant features to various vendor-styles. Afterward, the backbone network is then recalibrated to the downstream task of lesion detection with
+the specific supervised learning. The proposed method is evaluated with
+mammograms from four vendors and one unseen public dataset. The
+experimental results suggest that our approach can effectively improve
+detection performance on both seen and unseen domains, and outperforms many state-of-the-art (SOTA) generalization methods},
+ title = {Domain Generalization for Mammography
+Detection via Multi-style and Multi-view
+Contrastive Learning},
+ selected={false},
+ preview={DomainGeneralization.jpg},
+ pdf={DomainGeneralization.pdf},
+ year = {2021}
 }

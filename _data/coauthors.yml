@@ -1,34 +1,39 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Pan":
+  - firstname: ["Hao"]
+    url: https://haopan.github.io/
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Wang":
+  - firstname: ["Wenping"]
+    url: https://www.cs.hku.hk/people/academic-staff/wenping
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Li":
+  - firstname: ["Changjian"]
+    url: https://enigma-li.github.io/
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Cui":
+  - firstname: ["Zhiming"]
+    url: https://erdanc.github.io/
+  
+"Chen":
+  - firstname: ["Qimin"]
+    url: https://qiminchen.github.io/
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Chen":
+  - firstname: ["Zhiqin"]
+    url: https://czq142857.github.io/
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"Chaudhuri":
+  - firstname: ["Siddhartha"]
+    url: https://www.cse.iitb.ac.in/~sidch/
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"Huang":
+  - firstname: ["Qixing"]
+    url: https://www.cs.utexas.edu/~huangqx/
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"Guibas":
+  - firstname: ["Leonidas"]
+    url: https://geometry.stanford.edu/
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"Nakayama":
+  - firstname: ["George Kiyohiro"]
+    url: https://georgenakayama.github.io/
