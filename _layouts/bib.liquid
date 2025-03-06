@@ -67,25 +67,28 @@
           {% endif %}
         {%- endif -%}
         {% assign coauthor_url = null %}
-        {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
-        {% if site.data.coauthors[clean_last_name] %}
-          {%- for coauthor in site.data.coauthors[clean_last_name] -%}
-            {% if coauthor.firstname contains author.first %}
-              {%- assign coauthor_url = coauthor.url -%}
-              {% break %}
-            {% endif %}
-          {% endfor %}
-        {%- endif -%}
+
+        {% for coauthor in site.data.coauthors %}
+          {% assign coauthor_first = coauthor.firstname | downcase | remove_accents %}
+          {% assign coauthor_last  = coauthor.lastname  | downcase | remove_accents %}
+          {% assign author_first   = author.first       | downcase | remove_accents %}
+          {% assign author_last    = author_last_name   | downcase | remove_accents %}
+
+          {% if coauthor_first == author_first and coauthor_last == author_last %}
+            {% assign coauthor_url = coauthor.url %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
 
         {%- if forloop.length > 1 -%}
           {% if forloop.first == false %},&nbsp;{% endif %}
           {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
         {% endif %}
         {%- if author_is_self -%}
-          <em>
+          <strong>
             {{- author.first }}
             {{ author_last_html -}}
-          </em>
+          </strong>
         {%- else -%}
           {%- if coauthor_url -%}
             <a href="{{ coauthor_url }}">

@@ -59,7 +59,7 @@
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
-            {% if p.nav and p.autogen == null %}
+            {% if p.nav and p.autogen == null and p.title == "publications"%}
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
                 {% for child in p.children %}
@@ -117,6 +117,9 @@
               {% endif %}
             {% endif %}
           {% endfor %}
+          <li class="nav-item {% if page.title == 'CV' %}active{% endif %}">
+	          <a class="nav-link" target="_blank" href="{{ '/assets/pdf/yuezhi_cv.pdf' | relative_url }}">CV</a>
+          </li>   
           {% if site.search_enabled %}
             <!-- Search -->
             <li class="nav-item">

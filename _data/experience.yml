@@ -1,0 +1,11 @@
+- company: "Adobe Research"
+  date: "2024"
+  position: "Research Intern"
+  hosts: "Zhiqin Chen, Vova Kim, Siddhartha Chaudhuri"
+  logo: "/assets/img/experience_logo/adobe.png"
+
+- company: "Microsoft Research Asia"
+  date: "2022"
+  position: "Research Intern"
+  hosts: "Hao Pan"
+  logo: "/assets/img/experience_logo/microsoft.png"

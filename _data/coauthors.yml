@@ -1,39 +1,57 @@
-"Pan":
-  - firstname: ["Hao"]
-    url: https://haopan.github.io/
+# _data/coauthors.yml
 
-"Wang":
-  - firstname: ["Wenping"]
-    url: https://www.cs.hku.hk/people/academic-staff/wenping
+- firstname: "Hao"
+  lastname: "Pan"
+  url: "https://haopan.github.io/"
 
-"Li":
-  - firstname: ["Changjian"]
-    url: https://enigma-li.github.io/
+- firstname: "Wenping"
+  lastname: "Wang"
+  url: "https://www.cs.hku.hk/people/academic-staff/wenping"
 
-"Cui":
-  - firstname: ["Zhiming"]
-    url: https://erdanc.github.io/
-  
-"Chen":
-  - firstname: ["Qimin"]
-    url: https://qiminchen.github.io/
+- firstname: "Changjian"
+  lastname: "Li"
+  url: "https://enigma-li.github.io/"
 
-"Chen":
-  - firstname: ["Zhiqin"]
-    url: https://czq142857.github.io/
+- firstname: "Zhiming"
+  lastname: "Cui"
+  url: "https://erdanc.github.io/"
 
-"Chaudhuri":
-  - firstname: ["Siddhartha"]
-    url: https://www.cse.iitb.ac.in/~sidch/
+# For "Chen", you can list multiple entries if you need multiple variants:
+- firstname: "Qimin"
+  lastname: "Chen"
+  url: "https://qiminchen.github.io/"
 
-"Huang":
-  - firstname: ["Qixing"]
-    url: https://www.cs.utexas.edu/~huangqx/
 
-"Guibas":
-  - firstname: ["Leonidas"]
-    url: https://geometry.stanford.edu/
 
-"Nakayama":
-  - firstname: ["George Kiyohiro"]
-    url: https://georgenakayama.github.io/
+- firstname: "Zhiqin"
+  lastname: "Chen"
+  url: "https://czq142857.github.io/"
+
+
+- firstname: "Siddhartha"
+  lastname: "Chaudhuri"
+  url: "https://www.cse.iitb.ac.in/~sidch/"
+
+- firstname: "Qixing"
+  lastname: "Huang"
+  url: "https://www.cs.utexas.edu/~huangqx/"
+
+- firstname: "Xiangru"
+  lastname: "Huang"
+  url: "https://en.westlake.edu.cn/faculty/xiangru-huang.html/"
+
+- firstname: "Leonidas"
+  lastname: "Guibas"
+  url: "https://geometry.stanford.edu/"
+
+- firstname: "George Kiyohiro"
+  lastname: "Nakayama"
+  url: "https://georgenakayama.github.io/"
+
+- firstname: "Vladimir G."
+  lastname: "Kim"
+  url: "http://www.vovakim.com/"
+
+- firstname: "Haitao"
+  lastname: "Yang"
+  url: "https://yanghtr.github.io/"
