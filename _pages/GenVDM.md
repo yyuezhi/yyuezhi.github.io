@@ -153,7 +153,7 @@ nav_order: 2
     @inproceedings{yang2025GenVDM,
       title={GenVDM: Generating Vector Displacement Maps From a Single Image},
       author = {Yang, Yuezhi and Chen, Qimin and Kim, Vladimir G. and Chaudhuri, Siddhartha and Huang, Qixing and Chen, Zhiqin},
-      booktitle={International Conference on Computer Vision and Pattern Recognition},
+      booktitle={Conference on Computer Vision and Pattern Recognition},
       year={2025},
     }
         </code></pre>
