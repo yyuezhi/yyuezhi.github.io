@@ -57,9 +57,10 @@ nav_order: 2
 
     <div style="margin-top: 15px; text-align: center;">
       <span style="margin-right: 15px; font-size: 1.3em;">
-        <a href="https://www.arxiv.org/abs/2503.00605">[Paper (CVPR 2025)]</a>
+        <a href="https://www.arxiv.org/abs/2503.00605">[Paper (CVPR 2025 <span style="color:#e60000">Highlight</span>)]</a>
         <a href="https://github.com/yyuezhi/GenVDM/">[Code]</a>
-        <a href="https://github.com/yyuezhi/GenVDM/">[Data]</a>
+        <a href="https://huggingface.co/datasets/yzyang/VDM_Dataset/">[Data]</a>
+        <a href="https://www.youtube.com/watch?v=QnLVobyZUuM/">[Video]</a>
 
 
   <div style="margin-top: 30px;">

@@ -1,23 +1,29 @@
 ---
 ---
-@inproceedings{GenVDM2024,
- author = {Yang, Yuezhi and Chen, Qimin and Kim, Vladimir G. and Chaudhuri, Siddhartha and Huang, Qixing and Chen, Zhiqin},
- booktitle = {Conference on Computer Vision and Pattern
-	Recognition (CVPR)},
- abstract= {Vector displacement map is a common tool for artists to add parts or surface details to 3D shapes. However, creating VDM is tedious as it requires artists enormous effort to model 3D shapes, Despite the growing popularity of text/image to 3D object model, most of them has fail to generate details comparable to VDM. In this project, we present a system to automatically
-generate a VDM conditioned on text prompt or an image. To tackle the challenge of VDM data scarcity, we propose a multi-view normal image generation model that fineturn stable diffusion model on part-level objaverse data. We then build a reconstruction model to directly reconstruct VDM from multi-view data. Preliminary result shows that our model outperforms text/image to 3D models in detail generation.},
- title = { GenVDM:
-Generating Vector Displacement Maps From a Single Image.},
+
+@inproceedings{SHAlign2025,
+ author = {He, Zihang and Lu, Jiaxin and Yang, Yuezhi and Deng, Congyue and Guibas, Leonidas and Huang, Qixing},
+ booktitle = {Symposium on Geometry Processing (SGP)},
+ abstract= {This paper studies the classical problem of 3D shape alignment, namely computing the relative rotation between two shapes
+(centered at the origin and normalized by scale) by aligning spherical harmonic coefficients of their spherical function
+representations. Unlike most prior work, which focuses on the regime in which the inputs have approximately the same shape,
+we focus on the more general and challenging setting in which the shapes may differ. Central to our approach is a stability
+analysis of spherical harmonic coefficients, which sheds light on how to align them for robust rotation estimation. We observe
+that due to symmetries, certain spherical harmonic coefficients may vanish. As a result, using a robust norm for alignment that
+automatically discards such coefficients offers more accurate rotation estimates than the widely used L2 norm. To enable efficient
+continuous optimization, we show how to analytically compute the Jacobian of spherical harmonic coefficients with respect to
+rotations. We also introduce an efficient approach for rotation initialization that requires only a sparse set of rotation samples.
+Experimental results show that our approach achieves better accuracy and efficiency compared to baseline approaches.},
+ title = { An Efficient Global-2-Local Rotation Optimization Approach via Spherical Harmonics.},
  selected={true},
- preview={GenVDM.png},
+ pdf={SHAlign.pdf},
+ preview={SHAlign.png},
  year = {2025},
- pdf={GenVDM.pdf},
- code = {https://github.com/yyuezhi/GenVDM/},
- website  = {GenVDM/}
+ star_authors   = {Yuezhi Yang and Jiaxin Lu and Zihang He}
 }
 
 
-@inproceedings{GenAnalysis2024,
+@inproceedings{GenAnalysis2025,
  author = {Yang, Yuezhi and Yang, Haitao and Nakayama, George Kiyohiro and Huang, Xiangru and Guibas, Leonidas and Huang, Qixing},
  booktitle = {SIGGRAPH (Journal)},
  abstract= {We introduce GenAnalysis, an implicit shape generation framework that
@@ -40,6 +46,27 @@ Generators with Deformation Regularizations.},
  pdf={GenAnalysis_small.pdf},
  year = {2025}
 }
+
+@inproceedings{GenVDM2025,
+ author = {Yang, Yuezhi and Chen, Qimin and Kim, Vladimir G. and Chaudhuri, Siddhartha and Huang, Qixing and Chen, Zhiqin},
+ booktitle = {Conference on Computer Vision and Pattern
+	Recognition (CVPR)},
+ abstract= {Vector displacement map is a common tool for artists to add parts or surface details to 3D shapes. However, creating VDM is tedious as it requires artists enormous effort to model 3D shapes, Despite the growing popularity of text/image to 3D object model, most of them has fail to generate details comparable to VDM. In this project, we present a system to automatically
+generate a VDM conditioned on text prompt or an image. To tackle the challenge of VDM data scarcity, we propose a multi-view normal image generation model that fineturn stable diffusion model on part-level objaverse data. We then build a reconstruction model to directly reconstruct VDM from multi-view data. Preliminary result shows that our model outperforms text/image to 3D models in detail generation.},
+ title = { GenVDM:
+Generating Vector Displacement Maps From a Single Image.},
+ selected={true},
+ preview={GenVDM.png},
+ year = {2025},
+ pdf={GenVDM.pdf},
+ code = {https://github.com/yyuezhi/GenVDM/},
+ video = {https://www.youtube.com/watch?v=QnLVobyZUuM},
+ website  = {GenVDM/},
+  special = {highlight}
+}
+
+
+
 
 
 @inproceedings{SketchConcept2022,

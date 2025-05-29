@@ -50,23 +50,49 @@
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
     <div class="author">
-      {% assign author_array_size = entry.author_array | size %}
 
+      {%- comment -%}
+      ---------------------------------------------------
+      0. Parse star_authors / dagger_authors into 2 lists
+      ---------------------------------------------------
+      {%- endcomment -%}
+      {% assign star_raw   = entry.star_authors   | default: '' | strip %}
+      {% assign dagger_raw = entry.dagger_authors | default: '' | strip %}
+
+      {% assign star_list   = star_raw   | remove_accents | downcase | split: ' and ' %}
+      {% assign dagger_list = dagger_raw | remove_accents | downcase | split: ' and ' %}
+
+      {%- comment -%}
+      ---------------------------------------------------
+      1. Original housekeeping (author limit)
+      ---------------------------------------------------
+      {%- endcomment -%}
+      {% assign author_array_size  = entry.author_array | size %}
       {% assign author_array_limit = author_array_size %}
       {% if site.max_author_limit and author_array_size > site.max_author_limit %}
         {% assign author_array_limit = site.max_author_limit %}
       {% endif %}
 
       {%- for author in entry.author_array limit: author_array_limit -%}
+
+        {%- comment -%} 1a. Is this “me”? {%- endcomment -%}
         {% assign author_is_self = false %}
-        {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
-        {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
-        {% if site.scholar.last_name contains author_last_name %}
-          {% if site.scholar.first_name contains author.first %}
-            {% assign author_is_self = true %}
-          {% endif %}
-        {%- endif -%}
-        {% assign coauthor_url = null %}
+        {% assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' %}
+        {% if site.scholar.last_name contains author_last_name
+              and site.scholar.first_name contains author.first %}
+          {% assign author_is_self = true %}
+        {% endif %}
+
+        {%- comment -%} 1b. Pick superscript (if any) {%- endcomment -%}
+        {% assign full_name_key = author.first
+                                  | append: ' '
+                                  | append: author_last_name
+                                  | remove_accents
+                                  | downcase
+                                  | strip %}
+        {% assign extra_sup = '' %}
+        {% if star_list contains full_name_key %}{% assign extra_sup = '*' %}{% endif %}
+        {% if dagger_list contains full_name_key %}{% assign extra_sup = '†' %}{% endif %}
 
         {% for coauthor in site.data.coauthors %}
           {% assign coauthor_first = coauthor.firstname | downcase | remove_accents %}
@@ -80,71 +106,56 @@
           {% endif %}
         {% endfor %}
 
-        {%- if forloop.length > 1 -%}
-          {% if forloop.first == false %},&nbsp;{% endif %}
-          {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
-        {% endif %}
-        {%- if author_is_self -%}
-          <strong>
-            {{- author.first }}
-            {{ author_last_html -}}
-          </strong>
-        {%- else -%}
-          {%- if coauthor_url -%}
-            <a href="{{ coauthor_url }}">
-              {{- author.first }}
-              {{ author_last_html -}}
-            </a>
-          {%- else -%}
-            {{- author.first }}
-            {{ author_last_html -}}
+        {%- comment -%} 1d. Commas / “and” {%- endcomment -%}
+        {% if forloop.length > 1 %}
+          {% unless forloop.first %},&nbsp;{% endunless %}
+          {% if forloop.last and author_array_limit == author_array_size %}
+            and&nbsp;
           {% endif %}
-        {%- endif -%}
-      {% endfor %}
-      {%- assign more_authors = author_array_size | minus: author_array_limit -%}
+        {% endif %}
 
-      {%- assign more_authors_hide = more_authors | append: ' more author' -%}
+        {%- capture rendered_name -%}
+          {{ author.first }} {{ author_last_name }}
+          {%- if extra_sup != '' -%}<sup>{{ extra_sup }}</sup>{%- endif -%}
+        {%- endcapture -%}
+
+        {% if author_is_self %}
+          <strong>{{ rendered_name | strip }}</strong>
+        {% elsif coauthor_url %}
+          <a href="{{ coauthor_url }}">{{ rendered_name | strip }}</a>
+        {% else %}
+          {{ rendered_name | strip }}
+        {% endif %}
+      {% endfor %}
+
+      {%- comment -%} 2. “+ N more authors” (unchanged) {%- endcomment -%}
+      {% assign more_authors = author_array_size | minus: author_array_limit %}
       {% if more_authors > 0 %}
-        {%- if more_authors > 1 -%}
-          {% assign more_authors_hide = more_authors_hide | append: 's' %}
-        {%- endif -%}
-        {% assign more_authors_show = '' %}
-        {%- for author in entry.author_array offset: author_array_limit -%}
-          {% assign more_authors_show = more_authors_show | append: author.first | append: ' ' | append: author.last %}
-          {% unless forloop.last %}
-            {% assign more_authors_show = more_authors_show | append: ', ' %}
-          {% endunless %}
-        {%- endfor -%}
-        {%- assign more_authors_show = more_authors_show | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
+        {% assign hide = more_authors | append: ' more author' %}
+        {% if more_authors > 1 %}{% assign hide = hide | append: 's' %}{% endif %}
+        {% assign show = '' %}
+        {% for author in entry.author_array offset: author_array_limit %}
+          {% assign show = show | append: author.first | append: ' ' | append: author.last %}
+          {% unless forloop.last %}{% assign show = show | append: ', ' %}{% endunless %}
+        {% endfor %}
         , and
-        <span
-          class="more-authors"
-          title="click to view {{ more_authors_hide }}"
-          onclick="
-              var element = $(this);
-              element.attr('title', '');
-              var more_authors_text = element.text() == '{{ more_authors_hide }}' ? '{{ more_authors_show }}' : '{{ more_authors_hide }}';
-              var cursorPosition = 0;
-              var textAdder = setInterval(function(){
-                element.html(more_authors_text.substring(0, cursorPosition + 1));
-                if (++cursorPosition == more_authors_text.length){
-                  clearInterval(textAdder);
-                }
-            }, '{{ site.more_authors_animation_delay }}');
-          "
-        >
-          {{- more_authors_hide -}}
+        <span class="more-authors"
+              title="click to view {{ hide }}"
+              onclick="
+                var e=this,t=e.textContent==`{{ hide }}`?`{{ show }}`:`{{ hide }}`,
+                    c=0;
+                var id=setInterval(()=>{e.textContent=t.slice(0,++c);
+                  if(c==t.length)clearInterval(id);},
+                  '{{ site.more_authors_animation_delay }}');
+              ">
+          {{ hide }}
         </span>
       {% endif %}
+
       {% if entry.annotation %}
-        <i
-          class="fa-solid fa-circle-info ml-1"
-          data-toggle="popover"
-          data-placement="top"
-          data-html="true"
-          data-content="{{ entry.annotation | escape }}"
-        >
-        </i>
+        <i class="fa-solid fa-circle-info ml-1"
+          data-toggle="popover" data-placement="top"
+          data-html="true" data-content="{{ entry.annotation | escape }}"></i>
       {% endif %}
     </div>
 
