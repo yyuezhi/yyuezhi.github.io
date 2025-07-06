@@ -11,4 +11,5 @@ then use browser to login http://localhost:8080/
 
 The img resource is in /asset, not in _site!
 Do not use WSL and remeber to open docker destop
+Need to use open docker desktop first
 ## Bug in Scrollable + Add Experience
