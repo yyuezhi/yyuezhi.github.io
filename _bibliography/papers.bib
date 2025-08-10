@@ -1,6 +1,17 @@
 ---
 ---
 
+@inproceedings{ARTDECO2025,
+ author = {Chen, Qimin and Yang, Yuezhi and Wang, Yifan and Kim, Vladimir G. and Chaudhuri, Siddhartha and Zhang, Hao and Chen, Zhiqin},
+ booktitle = {SIGGRAPH Asia(Conference)},
+ abstract= {We introduce a 3D detailizer, a neural model which can instantaneously (in <1s) transform a coarse 3D shape proxy into a high-quality asset with detailed geometry and texture as guided by an input text prompt. Our model is trained using the text prompt, which defines the shape class and characterizes the appearance and fine-grained style of the generated details. The coarse 3D proxy, which can be easily varied and adjusted (e.g., via user editing), provides structure control over the final shape. Importantly, our detailizer is not optimized for a single shape; it is the result of distilling a generative model, so that it can be reused, without retraining, to generate any number of shapes, with varied structures, whose local details all share a consistent style and appearance. Our detailizer training utilizes a pretrained multi-view image diffusion model, with text conditioning, to distill the foundational knowledge therein into our detailizer via Score Distillation Sampling (SDS). To improve SDS and enable our detailizer architecture to learn generalizable features over complex structures, we train our model in two training stages to generate shapes with increasing structural complexity. Through extensive experiments, we show that our method generates shapes of superior quality and details compared to existing text-to-3D models under varied structure control. Our detailizer can refine a coarse shape in less than a second, making it possible to interactively author and adjust 3D shapes. Furthermore, the user-imposed structure control can lead to creative, and hence out-of-distribution, 3D asset generations that are beyond the current capabilities of leading text-to-3D generative models. We demonstrate an interactive 3D modeling workflow our method enables, and its strong generalizability over styles, structures, and object categories.},
+ title = { ART-DECO: Arbitrary Text Guidance for 3D Detailizer Construction.},
+ selected={true},
+ pdf={ARTDECO.pdf},
+ preview={ARTDECO.png},
+ year = {2025}
+}
+
 @inproceedings{SHAlign2025,
  author = {He, Zihang and Yang, Yuezhi and Deng, Congyue and Lu, Jiaxin and Guibas, Leonidas and Huang, Qixing},
  booktitle = {Symposium on Geometry Processing (SGP)},
@@ -34,6 +45,7 @@ Generators with Deformation Regularizations.},
  selected={true},
  preview={GenAnalysis.png},
  pdf={GenAnalysis_small.pdf},
+ website  = {GenAnalysis/},
  year = {2025}
 }
 

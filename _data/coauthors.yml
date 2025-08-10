@@ -21,7 +21,13 @@
   lastname: "Chen"
   url: "https://qiminchen.github.io/"
 
+- firstname: "Yifan"
+  lastname: "Wang"
+  url: "https://yifita.netlify.app/"
 
+- firstname: "Hao"
+  lastname: "Zhang"
+  url: "https://www.cs.sfu.ca/~haoz/"
 
 - firstname: "Zhiqin"
   lastname: "Chen"
@@ -30,7 +36,7 @@
 
 - firstname: "Siddhartha"
   lastname: "Chaudhuri"
-  url: "https://www.cse.iitb.ac.in/~sidch/"
+  url: "https://sidch.com/"
 
 - firstname: "Qixing"
   lastname: "Huang"
