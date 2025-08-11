@@ -66,7 +66,7 @@ nav_order: 2
     <!-- Teaser -->
     <div style="margin-top: 30px;">
       <div class="text-center">
-        <img src="../assets/img/GenAnalysis/teaser.png" class="img-fluid rounded z-depth-1 short-image" alt="GenAnalysis teaser">
+        <img src="../assets/img/GenAnalysis/teaser0.png" class="img-fluid rounded z-depth-1 short-image" alt="GenAnalysis teaser">  
       </div>
       <div style="margin-top: 25px;">
         <p>
