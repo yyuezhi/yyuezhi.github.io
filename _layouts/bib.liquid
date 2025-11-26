@@ -106,12 +106,11 @@
           {% endif %}
         {% endfor %}
 
-        {%- comment -%} 1d. Commas / “and” {%- endcomment -%}
+        {%- comment -%} 1d. Commas only, no “and” {%- endcomment -%}
         {% if forloop.length > 1 %}
-          {% unless forloop.first %},&nbsp;{% endunless %}
-          {% if forloop.last and author_array_limit == author_array_size %}
-            and&nbsp;
-          {% endif %}
+          {% unless forloop.first %}
+            ,&nbsp;
+          {% endunless %}
         {% endif %}
 
         {%- capture rendered_name -%}

@@ -1,4 +1,11 @@
 # _data/coauthors.yml
+- firstname: "Mikaela Angelina"
+  lastname: "Uy"
+  url: "https://mikacuy.github.io/"
+
+- firstname: "Nicholas"
+  lastname: "Sharp"
+  url: "https://nmwsharp.com/"
 
 - firstname: "Hao"
   lastname: "Pan"
