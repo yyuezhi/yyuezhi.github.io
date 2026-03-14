@@ -3,15 +3,14 @@
 
 @inproceedings{ConvexField2026,
  author = {Yang, Yuezhi and Huang, Qixing and Uy, Mikaela Angelina and Sharp, Nicholas},
- booktitle = {In Submission},
- abstract= {This work proposes  a new formulation to the long-standing problem of convex decomposition through learning feature fields, enabling the first feed-forward model for open-world convex decomposition. 
-Our method produces high-quality decompositions of 3D shapes into a union of convex bodies, which are essential to accelerate collision detection in physical simulation, amongst many other applications.
-The key insight is to adopt a feature learning approach and learn a continuous feature field that can later be clustered to yield a good convex decomposition via our self-supervised, purely-geometric objective derived from the classical definition of convexity.
-Our formulation can be used for single shape optimization, but more importantly, feature prediction unlocks scalable, self-supervised learning on large datasets resulting in the first learned open-world for convex decomposition.
-Experiments show that our decompositions are higher-quality than alternatives and generalize across open-world objects as well as across representations to meshes, CAD models, and even Gaussian splats.},
+ booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+ abstract= {A feed-forward model for convex decomposition of 3D shapes by learning a continuous feature field where distances between point embeddings indicate whether they belong to the same convex component, trained by a geometric contrastive loss.},
  title = { Learning Convex Decomposition via Feature Fields.},
  selected={true},
  preview={convexfield.png},
+ pdf={convex_decomp_field.pdf},
+ website  = {https://research.nvidia.com/labs/sil/projects/learning-convex-decomp/},
+ video = {https://www.youtube.com/watch?v=DPc9YpFTGxk&t=23s},
  year = {2026}
 }
 
@@ -19,7 +18,7 @@ Experiments show that our decompositions are higher-quality than alternatives an
 @inproceedings{ARTDECO2025,
  author = {Chen, Qimin and Yang, Yuezhi and Wang, Yifan and Kim, Vladimir G. and Chaudhuri, Siddhartha and Zhang, Hao and Chen, Zhiqin},
  booktitle = {SIGGRAPH Asia(Conference)},
- abstract= {We introduce a 3D detailizer, a neural model which can instantaneously (in <1s) transform a coarse 3D shape proxy into a high-quality asset with detailed geometry and texture as guided by an input text prompt. Our model is trained using the text prompt, which defines the shape class and characterizes the appearance and fine-grained style of the generated details. The coarse 3D proxy, which can be easily varied and adjusted (e.g., via user editing), provides structure control over the final shape. Importantly, our detailizer is not optimized for a single shape; it is the result of distilling a generative model, so that it can be reused, without retraining, to generate any number of shapes, with varied structures, whose local details all share a consistent style and appearance. Our detailizer training utilizes a pretrained multi-view image diffusion model, with text conditioning, to distill the foundational knowledge therein into our detailizer via Score Distillation Sampling (SDS). To improve SDS and enable our detailizer architecture to learn generalizable features over complex structures, we train our model in two training stages to generate shapes with increasing structural complexity. Through extensive experiments, we show that our method generates shapes of superior quality and details compared to existing text-to-3D models under varied structure control. Our detailizer can refine a coarse shape in less than a second, making it possible to interactively author and adjust 3D shapes. Furthermore, the user-imposed structure control can lead to creative, and hence out-of-distribution, 3D asset generations that are beyond the current capabilities of leading text-to-3D generative models. We demonstrate an interactive 3D modeling workflow our method enables, and its strong generalizability over styles, structures, and object categories.},
+ abstract= {A reusable neural 3D detailizer that converts a coarse shape proxy into a detailed 3D asset within seconds, by distilling knowledge from a pretrained multi-view diffusion model via score distillation sampling.},
  title = { ART-DECO: Arbitrary Text Guidance for 3D Detailizer Construction.},
  selected={true},
  pdf={ARTDECO.pdf},
@@ -31,7 +30,7 @@ Experiments show that our decompositions are higher-quality than alternatives an
 @inproceedings{SHAlign2025,
  author = {He, Zihang and Yang, Yuezhi and Deng, Congyue and Lu, Jiaxin and Guibas, Leonidas and Huang, Qixing},
  booktitle = {Symposium on Geometry Processing (SGP)},
- abstract= {This paper studies the classical problem of 3D shape alignment, namely computing the relative rotation between two shapes (centered at the origin and normalized by scale) by aligning spherical harmonic coefficients of their spherical function representations. Unlike most prior work, which focuses on the regime in which the inputs have approximately the same shape, we focus on the more general and challenging setting in which the shapes may differ. Central to our approach is a stability analysis of spherical harmonic coefficients, which sheds light on how to align them for robust rotation estimation. We observe that due to symmetries, certain spherical harmonic coefficients may vanish. As a result, using a robust norm for alignment that automatically discards such coefficients offers more accurate rotation estimates than the widely used L2 norm. To enable efficient continuous optimization, we show how to analytically compute the Jacobian of spherical harmonic coefficients with respect to rotations. We also introduce an efficient approach for rotation initialization that requires only a sparse set of rotation samples. Experimental results show that our approach achieves better accuracy and efficiency compared to baseline approaches.},
+ abstract= {A global-to-local optimization method for estimating the relative rotation between two 3D shapes, by aligning spherical harmonic coefficients of spherical distance functions with a robust weighted objective.},
  title = { An Efficient Global-to-Local Rotation Optimization Approach via Spherical Harmonics.},
  selected={true},
  pdf={SHAlign.pdf},
@@ -43,19 +42,7 @@ Experiments show that our decompositions are higher-quality than alternatives an
 @inproceedings{GenAnalysis2025,
  author = {Yang, Yuezhi and Yang, Haitao and Nakayama, George Kiyohiro and Huang, Xiangru and Guibas, Leonidas and Huang, Qixing},
  booktitle = {SIGGRAPH (Journal)},
- abstract= {We introduce GenAnalysis, an implicit shape generation framework that
-allows joint analysis of a collection of man-made shapes. GenAnalysis innovates in learning an implicit shape generator to reconstruct a continuous
-shape space from the input shape collection. It offers interpolations between
-pairs of input shapes for correspondence computation. It also allows us to
-understand the shape variations of each shape in the context of neighboring
-shapes. Such variations provide segmentation cues. A key idea of GenAnalysis is to enforce an as-affine-as-possible (AAAP) deformation regularization
-loss among adjacent synthetic shapes of the generator. This loss forces the generator to learn the underlying piece-wise affine part structures. We show
-how to extract data-driven segmentation cues by recovering piece-wise
-affine vector fields in the tangent space of each shape and how to use this
-generator to compute consistent inter-shape correspondences. These correspondences are then used to aggregate single-shape segmentation cues into
-consistent segmentations. Experimental results on benchmark datasets show
-that GenAnalysis achieves state-of-the-art results on shape segmentation
-and shape matching.},
+ abstract= {We study the variation of shapes in the tangential latent space of a learned generative model, by enforcing piece-wise affine deformation regularization and analyzing the resulting tangent-space vector fields. This structure enables downstream 3D understanding tasks such as joint shape segmentation and cross-shape correspondence.},
  title = { GenAnalysis: Joint Shape Analysis by Learning Man-Made Shape
 Generators with Deformation Regularizations.},
  selected={true},
@@ -69,8 +56,7 @@ Generators with Deformation Regularizations.},
  author = {Yang, Yuezhi and Chen, Qimin and Kim, Vladimir G. and Chaudhuri, Siddhartha and Huang, Qixing and Chen, Zhiqin},
  booktitle = {Conference on Computer Vision and Pattern
 	Recognition (CVPR)},
- abstract= {Vector displacement map is a common tool for artists to add parts or surface details to 3D shapes. However, creating VDM is tedious as it requires artists enormous effort to model 3D shapes, Despite the growing popularity of text/image to 3D object model, most of them has fail to generate details comparable to VDM. In this project, we present a system to automatically
-generate a VDM conditioned on text prompt or an image. To tackle the challenge of VDM data scarcity, we propose a multi-view normal image generation model that fineturn stable diffusion model on part-level objaverse data. We then build a reconstruction model to directly reconstruct VDM from multi-view data. Preliminary result shows that our model outperforms text/image to 3D models in detail generation.},
+ abstract= {A generative model that produces reusable geometric detail stamps (Vector Displacement Maps) from a single image using multi-view diffusion model and neural deformation field.},
  title = { GenVDM:
 Generating Vector Displacement Maps From a Single Image.},
  selected={true},
@@ -90,14 +76,7 @@ Generating Vector Displacement Maps From a Single Image.},
 @inproceedings{SketchConcept2022,
  author = {Yang, Yuezhi and Pan, Hao},
  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
- abstract= {Sketch design concepts are recurring patterns found in parametric CAD sketches.Though rarely explicitly formalized by the CAD designers, these concepts are implicitly used in design for modularity and regularity. In this paper, we propose a
-learning based approach that discovers the modular concepts by induction over raw
-sketches. We propose the dual implicit-explicit representation of concept structures
-that allows implicit detection and explicit generation, and the separation of structure
-generation and parameter instantiation for parameterized concept generation, to
-learn modular concepts by end-to-end training. We demonstrate the design concept
-learning on a large scale CAD sketch dataset and show its applications for design
-intent interpretation and auto-completion.},
+ abstract= {We study the discovery of modular design concepts in CAD sketches, by representing sketches as constraint graphs in a declarative DSL and learning reusable concept libraries through self-supervised program library induction. The learned concepts capture reusable geometric primitives and constraint patterns, enabling structured sketch interpretation and more accurate sketch auto-completion.},
  title = {Discovering Design Concepts for CAD Sketches},
  code = {https://github.com/yyuezhi/SketchConcept},
  Preprint = {https://arxiv.org/abs/2210.14451},
@@ -114,24 +93,7 @@ intent interpretation and auto-completion.},
 @inproceedings{ToothImpaintor2021,
  author = {Yang, Yuezhi and Cui, Zhiming and Li, Changjian and Wang, Wenping},
  booktitle = {Arxiv},
- abstract= {In orthodontic treatment, a full tooth model consisting of
-both the crown and root is indispensable in making the treatment plan.
-However, acquiring tooth root information to obtain the full tooth model
-from CBCT images is sometimes restricted due to the massive radiation
-of CBCT scanning. Thus, reconstructing the full tooth shape from the
-ready-to-use input, e.g., the partial intra-oral scan and the 2D panoramic
-image, is an applicable and valuable solution. In this paper, we propose
-a neural network, called ToothInpaintor, that takes as input a partial 3D
-dental model and a 2D panoramic image and reconstructs the full tooth
-model with high-quality root(s). Technically, we utilize the implicit rep-
-resentation for both the 3D and 2D inputs, and learn a latent space of the
-full tooth shapes. At test time, given an input, we successfully project
-it to the learned latent space via neural optimization to obtain the full
-tooth model conditioned on the input. To help find the robust projec-
-tion, a novel adversarial learning module is exploited in our pipeline. We
-extensively evaluate our method on a dataset collected from real-world
-clinics. The evaluation, comparison, and comprehensive ablation studies
-demonstrate that our approach },
+ abstract= {We study tooth inpainting from a partial 3D dental model and a 2D panoramic image, by learning a latent space of full tooth shapes using SDF representation and projecting the inputs into this space via neural optimization. An adversarial constraint on the latent code helps ensure globally plausible tooth geometry while reconstructing the missing roots.},
  title = {ToothInpaintor: Tooth Inpainting from Partial
 3D Dental Model and 2D Panoramic Image},
  selected={true},
@@ -145,21 +107,7 @@ demonstrate that our approach },
  author = {Li, Zheren and Cui, Zhiming and Wang, Sheng and Qi, Yuji and Ouyang, Xi and Chen, Qitian and Yang, Yuezhi
     and Xue, Zhong and Shen, Dinggang and Cheng, Jie-Zhi},
  booktitle = {Medical Image Computing and Computer Assisted Intervention Conference(MICCAI)},
- abstract= { Lesion detection is a fundamental problem in the computeraided diagnosis scheme for mammography. The advance of deep learning
-techniques have made a remarkable progress for this task, provided that
-the training data are large and sufficiently diverse in terms of image style
-and quality. In particular, the diversity of image style may be majorly
-attributed to the vendor factor. However, the collection of mammograms
-from vendors as many as possible is very expensive and sometimes impractical for laboratory-scale studies. Accordingly, to further augment
-the generalization capability of deep learning model to various vendors
-with limited resources, a new contrastive learning scheme is developed.
-Specifically, the backbone network is firstly trained with a multi-style
-and multi-view unsupervised self-learning scheme for the embedding of
-invariant features to various vendor-styles. Afterward, the backbone network is then recalibrated to the downstream task of lesion detection with
-the specific supervised learning. The proposed method is evaluated with
-mammograms from four vendors and one unseen public dataset. The
-experimental results suggest that our approach can effectively improve
-detection performance on both seen and unseen domains, and outperforms many state-of-the-art (SOTA) generalization methods},
+ abstract= {We study domain generalization for mammography lesion detection, by learning domain-invariant features through multi-style and multi-view contrastive learning that pairs style-transferred images and complementary CC/MLO views as positives.},
  title = {Domain Generalization for Mammography
 Detection via Multi-style and Multi-view
 Contrastive Learning},
