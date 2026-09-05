@@ -1,3 +1,9 @@
+- company: "Roblox"
+  date: "2026"
+  position: "Research Intern"
+  mentors: "Chrystiano Araújo, Hsueh-Ti Derek Liu, Yizhak Ben-Shabat"
+  logo: "/assets/img/experience_logo/roblox.png"
+
 - company: "Nvidia | Spatial Intelligence Lab"
   date: "2025"
   position: "Research Intern"

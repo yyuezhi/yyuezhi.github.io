@@ -18,7 +18,9 @@
             <td>
               <strong>{{ item.company }}</strong><br />
               {{ item.date }}, {{ item.position }}<br />
-              {% if item.hosts and item.hosts != "" %}
+              {% if item.mentors and item.mentors != "" %}
+                Mentors: {{ item.mentors }}
+              {% elsif item.hosts and item.hosts != "" %}
                 Hosts: {{ item.hosts }}
               {% endif %}
             </td>

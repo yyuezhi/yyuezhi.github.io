@@ -1,4 +1,20 @@
 # _data/coauthors.yml
+- firstname: "Sai Karthikey"
+  lastname: "Pentapati"
+  url: "https://karthikey97.github.io/"
+
+- firstname: "Shashank"
+  lastname: "Gupta"
+  url: "https://shngt.github.io/"
+
+- firstname: "Rajesh"
+  lastname: "Sureddi"
+  url: "https://rajeshsureddi.github.io/"
+
+- firstname: "Alan C."
+  lastname: "Bovik"
+  url: "https://ece.utexas.edu/people/faculty/alan-bovik"
+
 - firstname: "Mikaela Angelina"
   lastname: "Uy"
   url: "https://mikacuy.github.io/"
